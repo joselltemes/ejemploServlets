@@ -11,7 +11,8 @@ import java.io.PrintWriter;
 @WebServlet(urlPatterns = "/myServlet")
 public class MyServlet extends HttpServlet {
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
 
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
@@ -21,11 +22,8 @@ public class MyServlet extends HttpServlet {
 		out.println("<head><title>Ejemplo HTML desde Servlet</title></head>");
 		out.println("<body>");
 		out.println("<h1>Ejemplo Servlet</h1>");
-		out.println("<form action='/myServlet2'>");
-		out.println("<label for='nombre'>Introduce Nombre</p>");
-		out.println("<input type='text' name='nombre' id='nombre' placeholder='marta'/>");
-		out.println("<input type='submit'/>");
-		out.println("</form");
+		out.println("<p>Este es un ejemplo en el curso de Java para generar HTML desde un Servlet.</p>");
+		out.println("<p><a href=\"/myServlet2\">Vamos al otro Servlet</a></p>");
 		out.println("</body></html>");
 	}
 

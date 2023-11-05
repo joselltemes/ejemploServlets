@@ -15,15 +15,13 @@ public class MyServlet2 extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 
 		response.setContentType("text/html");
-		String nombre = request.getParameter("nombre");
-		StringBuilder sb=new StringBuilder("<h1>Bienvenid@ "+nombre+"!!</h1>");
 		PrintWriter out = response.getWriter();
 
 		// send HTML page to client
 		out.println("<html>");
 		out.println("<head><title>Ejemplo HTML desde Servlet</title></head>");
 		out.println("<body>");
-		out.println(sb);
+		out.println("<h1>Bienvenido!!</h1>");
 	}
 
 }
